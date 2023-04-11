@@ -1,24 +1,37 @@
-const Profile = (props) => {
+import PropTypes from "prop-types";
+const Profile = ({fullName,bio,profession,children}) => {
     return ( 
         <div>
             <div class="card">
                 <div class="card-body">
-                   fullname: {props.fullName}
+                   fullname: {fullName}
                 </div>
             </div>
             <div class="card">
                 <div class="card-body">
-                   bio: {props.bio}
+                   bio: {bio}
                 </div>
                 <div class="card-body">
-                   profession: {props.profession}
-                   <h1>{props.children}</h1>
+                   profession: {profession}
+                   <h1>{children}</h1>
 
                 </div>
+         
                 
             </div>
         </div>
      );
+
+}
+
+Profile.defaultProps={
+    fullName:"Moussa",
+    bio:"dév mobile",
+    profession:"informaticien"
+}
+
+Profile.propTypes={
+    fullName: propTypes.string,
 }
  
 export default Profile;

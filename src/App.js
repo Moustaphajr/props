@@ -4,6 +4,13 @@ import Profile from './profile/profile';
 
 
  function App(){
+
+  const handleName=(name)=>{
+
+    alert("hello "+name)
+
+
+  }
   
   return (
     <div className="App">
@@ -12,6 +19,8 @@ import Profile from './profile/profile';
       bio="web developper"
       profession="informaticien"
       annee="1"
+      handleName={handleName("sadio")}
+
       
       ><img src="/sadio.jpg" alt="" srcset="" /></Profile>
     
